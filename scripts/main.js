@@ -13,8 +13,13 @@ listItems.forEach((item) => {
 });
 
 
+const myImage = document.querySelector("img");
 
-// Store a reference to the <h1> in a variable
-const myHeading = document.querySelector("h1");
-// Update the text content of the <h1>
-myHeading.textContent = "Hello world!";
+myImage.addEventListener("click", () => {
+  const mySrc = myImage.getAttribute("src");
+  if (mySrc === "images/cat1.jpg") {
+    myImage.setAttribute("src", "images/cat2.jpg");
+  } else {
+    myImage.setAttribute("src", "images/cat1.jpg");
+  }
+});
