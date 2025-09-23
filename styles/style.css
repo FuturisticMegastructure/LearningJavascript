@@ -29,5 +29,13 @@ img {
 .container{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: left;
+}
+
+.right{
+width: 80%;
+}
+
+.left{
+width: 20%;
 }
