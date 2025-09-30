@@ -11,6 +11,52 @@ body{
     font-family: "Roboto", serif;
 }
 
+/*.right{
+    display: grid;
+}*/
+
+.upgrade_complete{
+    display: flex;
+}
+
+.multibuy{
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    width: 60px;
+    height: 60px;
+    border: 4px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+    background-color: cornflowerblue;
+    margin-right: 10px;
+}
+
+.multibuy_buy{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.multibuy_count{
+    justify-content: center;
+    font-size: 15px;
+}
+
+.upgrade{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 450px;
+    height: 60px;
+    border: 4px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 10px;
+    background-color: cornflowerblue;
+}
+
 .container{
   display: flex;
   flex-direction: row;
@@ -89,20 +135,6 @@ body{
 .texts_div{
     margin-left: 10px;
     margin-right: 10px;
-}
-
-.upgrade{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 450px;
-    height: 60px;
-    border: 4px solid white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    position: relative;
-    margin-bottom: 10px;
-    background-color: cornflowerblue;
 }
 
 .upgrade-img{
