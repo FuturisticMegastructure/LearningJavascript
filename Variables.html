@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="styles/style-idleGame.css">
     <script async src="scripts/lessonsScripts/Lesson2/variables.js"></script>
   </head>
   <body>
@@ -16,27 +16,121 @@
                 <li>Lesson3:</li>
             </ul>
         </div>
-        <div class="guessing right">
-          <div>
-            <button id="button_points">Points</button>
-            <h3 id="text_points">You have 0 Points right now</h3>
-          </div>
-          <div>
-            <button id="button_extra_points">Extra Base Points</button>
-            <h3 id="text_extra_points">You make 0 Extra Points per click, next upgrade costs 10</h3>
-          </div>
-          <div>
-            <button id="button_multiplier">Multiplier</button>
-            <h3 id="text_multiplier">You have x1 multiplier, next upgrade costs 100</h3>
-          </div>
-          <div>
-            <button id="button_percent">Percent</button>
-            <h3 id="text_percent">You have x1 percent multiplier, next upgrade costs 1000</h3>
-          </div>
-          <div>
-            <button id="button_auto_points">Auto Points</button>
-            <h3 id="text_auto_points">You make 0 percent Auto Points per second, next upgrade costs 100</h3>
-          </div>
+        <div class="main_right">
+          <section>
+        <div class="main">
+            <div class="left">
+                <h3>Resources: <span class="resources-count">1000</span></h3>
+                <div class="resource-image-container">
+                    <img src="./assets/resources.png" alt="resources" srcset="" class="resources-image" onclick="incrementResources(event)" draggable="false">
+                </div>
+                <h3>Science: <span class="science-count">1000</span></h3>
+                <div class="science-image-container">
+                    <img src="./assets/science.png" alt="resources" srcset="" class="resources-image" onclick="incrementScience(event)" draggable="false">
+                </div>
+            </div>
+            <div class="right">
+
+                <div class="upgrade" onclick="buyWillpower()">
+                    <div class="left-upgrade">
+                        <img src="./assets/hand.png" alt="" class="upgrade-img">
+                    </div>
+                    <div class="mid-upgrade">
+                        <h4>WillPower</h4>
+                        <div class="cost-info">
+                            <p>Cost: <span class="willpower-resources-cost">10</span> </p>
+                            <img src="./assets/resources.png" alt="" srcset="" class="resource-img">
+                            <p><span class="willpower-science-cost">10</span> </p>
+                            <img src="./assets/science.png" alt="" srcset="" class="resource-img">
+                        </div>
+                    </div>
+                    <div class="right-upgrade">
+                        <span class="willpower-count">0</span> willpower
+                    </div>
+                    <div class="level-info">
+                        <p>
+                            +<span class="willpower-increase">1</span> resources and science/c
+                        </p>
+                        
+                    </div>
+                </div>
+
+                <div class="upgrade" onclick="buyWorker()">
+                    <div class="left-upgrade">
+                        <img src="./assets/worker-icon-upgrade.png" alt="" class="upgrade-img">
+                    </div>
+                    <div class="mid-upgrade">
+                        <h4>Worker</h4>
+                        <div class="cost-info">
+                            <p>Cost: <span class="worker-cost">10</span> </p>
+                            <img src="./assets/resources.png" alt="" srcset="" class="resource-img">
+                        </div>
+                    </div>
+                    <div class="right-upgrade">
+                        <span class="worker-count">0</span> workers
+                    </div>
+                    <div class="level-info">
+                        <p>
+                            +<span class="worker-increase">0</span> resources/s
+                        </p>
+                    </div>
+                </div>
+
+                <div class="upgrade" onclick="buyResearcher()">
+                    <div class="left-upgrade">
+                        <img src="./assets/researcher.png" alt="" class="upgrade-img">
+                    </div>
+                    <div class="mid-upgrade">
+                        <h4>Researcher</h4>
+                        <div class="cost-info">
+                            <p>Cost: <span class="researcher-cost">10</span> </p>
+                            <img src="./assets/science.png" alt="" srcset="" class="resource-img">
+                        </div>
+                    </div>
+                    <div class="right-upgrade">
+                        <span class="researcher-count">0</span> Researchers
+                    </div>
+                    <div class="level-info">
+                        <p>
+                            +<span class="researcher-increase">0</span> science/s
+                        </p>
+                    </div>
+                </div>
+
+                <div class="upgrade" onclick="buyResearcher()">
+                    <div class="left-upgrade">
+                        <img src="./assets/researcher.png" alt="" class="upgrade-img">
+                    </div>
+                    <div class="mid-upgrade">
+                        <h4>Researcher</h4>
+                        <div class="cost-info">
+                            <p>Cost: <span class="researcher-cost">10</span> </p>
+                            <img src="./assets/science.png" alt="" srcset="" class="resource-img">
+                        </div>
+                    </div>
+                    <div class="right-upgrade">
+                        <span class="researcher-count">0</span> Researchers
+                    </div>
+                    <div class="level-info">
+                        <p>
+                            +<span class="researcher-increase">0</span> science/s
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+
+        <div class="statistics">
+            <div class="texts">
+                <div class="texts_div">Resources Per Second: <span id="resources-per-second-text">0</span></div>
+                <div class="texts_div">Science Per Second: <span id="science-per-second-text">0</span></div>
+                <div class="texts_div">Resources and Science Per Clic: <span id="rands-per-clic-text">1</span></div>
+            </div>
+        </div>
+    </section>
+
         </div>
     </div>
     
