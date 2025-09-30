@@ -30,10 +30,11 @@
             </div>
           </div>
           <div class="right">
+            
             <div class="upgrade_complete">  
               <div class="multibuy"  onclick="multibuyWillpower()">
                 <div class="multibuy_buy">Buy</div>
-                <div class="multibuy_count">x1</div>
+                <div class="multibuy_count">x<span class="multibuyWillpowerCount">1</span></div>
               </div>
               <div class="upgrade" onclick="buyWillpower()">
                 <div class="left-upgrade">
@@ -57,23 +58,26 @@
               </div>
             </div>
 
-
-            <div class="upgrade" onclick="buyWorker()">
-              <div class="left-upgrade">
-                <img src="./assets/worker-icon-upgrade.png" alt="" class="upgrade-img">
+            <div class="upgrade_complete">  
+              <div class="multibuy"  onclick="multibuyWorker()">
+                <div class="multibuy_buy">Buy</div>
+                <div class="multibuy_count">x<span class="multibuyWorkerCount">1</span></div>
               </div>
-              <div class="mid-upgrade">
-                <h4>Worker</h4>
-                <div class="cost-info">
-                 <p>Cost: <span class="worker-cost">10</span> </p>
-                 <img src="./assets/resources.png" alt="" srcset="" class="resource-img">
+              <div class="upgrade" onclick="buyWorker()">
+                <div class="left-upgrade">
+                  <img src="./assets/worker-icon-upgrade.png" alt="" class="upgrade-img">
                 </div>
-              </div>
-              <div class="right-upgrade">
-                <span class="worker-count">0</span> workers
-              </div>
-              <div class="level-info">
-                <p>+<span class="worker-increase">0</span> resources/s</p>
+                <div class="mid-upgrade">
+                  <h4>Worker</h4>
+                  <div class="cost-info">
+                    <p>Cost: <span class="worker-cost">10</span> </p>
+                    <img src="./assets/resources.png" alt="" srcset="" class="resource-img">
+                  </div>
+                </div>
+                <div class="right-upgrade"><span class="worker-count">0</span> workers</div>
+                <div class="level-info">
+                  <p>+<span class="worker-increase">0</span> resources/s</p>
+                </div>
               </div>
             </div>
 
